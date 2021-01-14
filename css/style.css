@@ -1,0 +1,52 @@
+/* CLASSI COMUNI E CLASSI UTILITY */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.active {
+    font-weight: 600;
+}
+
+
+/* STILE */
+nav {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+
+nav ul.outer {
+    list-style: none;   
+    display: flex;
+    justify-content: space-between;
+    outline: 1px solid orange;
+}
+
+nav ul.left-menu {
+    flex-basis: 30%;
+}
+
+nav ul.right-menu {
+    flex-basis: 50%;
+}
+
+nav ul li {
+    /* flex: 1; */
+    outline: 1px solid lightblue;
+    text-align: center;
+    line-height: 50px;
+    padding: 0 6px;
+}
+
+nav ul.dropdown-menu {
+    display: block;
+    list-style: none;
+}
