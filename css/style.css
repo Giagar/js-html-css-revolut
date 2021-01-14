@@ -3,6 +3,10 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body { 
+    overflow-y: scroll; /* lo metto per mimare il sito originale, che, avendo del contentuto, ha sempre la scrollbar verticale attiva */
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -12,7 +16,6 @@ html {
 .wrapper {
     padding: 0 50px;
     box-shadow: 0 0 19px -5px lightgrey;
-
 }
 
 .active {
@@ -24,23 +27,44 @@ html {
     color: rgb(53, 52, 52) !important;
 }
 
+.soon {
+    color:  #bfc5cc;
+    position: relative;
+}
+
+.soon::after {
+    content: "coming soon";
+    color: #337DEE;
+    text-transform: uppercase;
+    font-size: 9px;
+    position: absolute;
+    width: 90px;
+    top: -15px;
+    right: -68px;
+}
+
+nav ul {
+    list-style: none;
+}
+
 nav ul li {
     color:rgb(146, 146, 146);
+}
+
+nav ul li.dropdown-inside {
+    position: relative; /* per posizionare dropdown-menu */
 }
 
 nav ul li a {
     text-decoration: none;
     color: inherit;
 }
-/* 
-nav ul li:hover {
-    color: rgb(53, 52, 52);
-} */
+
 
 /* STILE */
 nav {
-    min-width: 980px;
-    max-width: 1250px;
+    min-width: 1150px;
+    max-width: 1350px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -48,7 +72,6 @@ nav {
 }
 
 nav ul.outer {
-    list-style: none;   
     display: flex;
     justify-content: space-between;
 }
@@ -63,14 +86,13 @@ nav ul.left-menu .logo img {
     vertical-align: middle;
     line-height: 100px;
 }
-/* _/left-menu */
 
 /* _right-menu */
 nav ul.right-menu {
     flex-basis: 55%;
 }
 
-nav ul li {
+nav ul.outer> li {
     /* flex: 1; */
     text-align: center;
     line-height: 100px;
@@ -78,13 +100,12 @@ nav ul li {
     /* vertical-align: middle; */
 }
 
-nav ul li span:hover, nav ul li a:hover, button:hover, .logo:hover {
-    cursor: pointer;
+nav ul.right-menu li span {
+    padding: 10px;
 }
 
-nav ul.dropdown-menu {
-    display: none;
-    list-style: none;
+nav ul li span:hover, nav ul li a:hover, button:hover, .logo:hover {
+    cursor: pointer;
 }
 
 nav .right-menu button {
@@ -103,3 +124,59 @@ nav .right-menu button.get-app {
     color: white;
     background-color: rgb(53, 52, 52);
 }
+
+/* _dropdown-menu */
+nav ul.right-menu ul.dropdown-menu {
+    display: block;
+    box-shadow: 0 0 5px -1px lightgrey;
+    border-radius: 10px;
+    position: absolute;
+    top: 80%;
+    background-color: white;
+    line-height: normal;
+    width: 215px;
+    text-align: left;
+}
+
+nav ul.right-menu .dropdown-menu li {
+    padding: 20px 10px; 
+}
+
+/* _features */
+nav ul.right-menu .dropdown-menu.features {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    left: -200px;
+}
+
+nav ul.right-menu .dropdown-menu.features ul {
+    width: 215px;
+}
+
+nav ul.right-menu .dropdown-menu.features li .section-img-container {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #cfd5db;
+    padding: 5px;
+}
+
+nav ul.right-menu .dropdown-menu.features li .section-img-container img.section-img {
+    width: 100%;
+    vertical-align: middle;
+    filter: invert(); /* mi serviva l'immagine bianca */
+}
+
+nav ul.right-menu .dropdown-menu.features li span.section-title {
+    text-transform: uppercase;
+    font-size: 14px;
+    color:  #cfd5db;
+}
+
+nav ul.right-menu .dropdown-menu.features li a {
+    text-transform: capitalize;
+}
+/* _/features */
+/* _/dropdown-menu */

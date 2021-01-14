@@ -10,17 +10,17 @@ $(document).ready(function() {
         $(this).parent().find(".dropdown-menu").toggle();
 
         //aggiungo/tolgo classe focus ai menu che contengono i dropdown
-        $(this).parent().children("span").toggleClass("focus");
+        $(this).parent().children("span.dropdown-title").toggleClass("focus");
     })
 
     //_bonus
     //avrei potuto usare hover, ma si creerebbe un effetto fastidioso (come nel sito originale): se clicco per chiudere un menu, poi, muovendomi verso un altro menu, questo si riapre. 
-    $("nav .dropdown-inside span").mouseenter(function() {
+    $("nav .dropdown-inside span.dropdown-title").mouseenter(function() {
         $("nav .dropdown-menu").css("display", "none");
         $(this).parent().find(".dropdown-menu").toggle();
 
         //aggiungo la classe focus ai menu contenenti i dropdown e la tolgo a tutti gli altri
-        $("nav .dropdown-inside span").removeClass("focus");
+        $("nav .dropdown-inside span.dropdown-title").removeClass("focus");
         $(this).addClass("focus");
     })
     //_/bonus
