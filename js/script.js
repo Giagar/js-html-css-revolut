@@ -10,6 +10,14 @@ $(document).ready(function() {
         $(this).parent().find(".dropdown-menu").toggle();
     })
 
+    //_bonus
+    $("nav .dropdown-inside span").mouseenter(function() {
+        $("nav .dropdown-menu").css("display", "none");
+        $(this).parent().find(".dropdown-menu").toggle();
+    })
+    //_/bonus
+
+
 
 
 

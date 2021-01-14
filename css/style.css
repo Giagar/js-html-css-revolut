@@ -47,6 +47,6 @@ nav ul li {
 }
 
 nav ul.dropdown-menu {
-    display: block;
+    display: none;
     list-style: none;
 }
