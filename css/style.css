@@ -127,7 +127,7 @@ nav .right-menu button.get-app {
 
 /* _dropdown-menu */
 nav ul.right-menu ul.dropdown-menu {
-    display: block;
+    display: none;
     box-shadow: 0 0 5px -1px lightgrey;
     border-radius: 10px;
     position: absolute;
@@ -144,14 +144,15 @@ nav ul.right-menu .dropdown-menu li {
 
 /* _features */
 nav ul.right-menu .dropdown-menu.features {
-    display: flex;
-    flex-direction: row;
-    width: auto;
-    left: -200px;
+    display: none;
+    width: 900px;
+    left: -160px;
+    clear: both;
 }
 
-nav ul.right-menu .dropdown-menu.features ul {
-    width: 215px;
+nav ul.right-menu .dropdown-menu.features li {
+    width: 225px;
+    float: left;
 }
 
 nav ul.right-menu .dropdown-menu.features li .section-img-container {
