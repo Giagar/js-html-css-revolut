@@ -9,44 +9,97 @@ html {
     padding: 0;
 }
 
-.active {
-    font-weight: 600;
+.wrapper {
+    padding: 0 50px;
+    box-shadow: 0 0 19px -5px lightgrey;
+
 }
 
+.active {
+    font-weight: 600;
+    color: rgb(53, 52, 52);
+}
+
+.focus {
+    color: rgb(53, 52, 52) !important;
+}
+
+nav ul li {
+    color:rgb(146, 146, 146);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+/* 
+nav ul li:hover {
+    color: rgb(53, 52, 52);
+} */
 
 /* STILE */
 nav {
-    width: 1000px;
+    min-width: 980px;
+    max-width: 1250px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    height: 50px;
+    height: 100px;
 }
 
 nav ul.outer {
     list-style: none;   
     display: flex;
     justify-content: space-between;
-    outline: 1px solid orange;
 }
 
+/* _left-menu */
 nav ul.left-menu {
-    flex-basis: 30%;
+    flex-basis: 25%;
 }
 
+nav ul.left-menu .logo img {
+    width: 20px;
+    vertical-align: middle;
+    line-height: 100px;
+}
+/* _/left-menu */
+
+/* _right-menu */
 nav ul.right-menu {
-    flex-basis: 50%;
+    flex-basis: 55%;
 }
 
 nav ul li {
     /* flex: 1; */
-    outline: 1px solid lightblue;
     text-align: center;
-    line-height: 50px;
+    line-height: 100px;
     padding: 0 6px;
+    /* vertical-align: middle; */
+}
+
+nav ul li span:hover, nav ul li a:hover, button:hover, .logo:hover {
+    cursor: pointer;
 }
 
 nav ul.dropdown-menu {
     display: none;
     list-style: none;
+}
+
+nav .right-menu button {
+    padding: 10px 19px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+nav .right-menu button.sign-in {
+    color: rgb(53, 52, 52);
+    background-color: #ebecec;
+}
+
+nav .right-menu button.get-app {
+    color: white;
+    background-color: rgb(53, 52, 52);
 }
